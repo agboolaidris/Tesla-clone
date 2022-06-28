@@ -1,13 +1,10 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import Card from "./ui/card";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.titleWrapper}>
-        <Text style={styles.title}>Model X</Text>
-        <Text style={styles.subTitle}>Starting of 20$</Text>
-      </View>
+      <Card />
     </View>
   );
 }
@@ -17,7 +14,4 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
   },
-  titleWrapper: {},
-  title: {},
-  subTitle: {},
 });
