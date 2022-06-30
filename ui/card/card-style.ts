@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   cardWrapper: {
     width: "100%",
-    height: "100%",
+    height: Dimensions.get("screen").height,
     justifyContent: "space-between",
   },
   titleWrapper: {
@@ -26,6 +26,6 @@ export const styles = StyleSheet.create({
   },
   buttonWrapper: {
     paddingHorizontal: 5,
-    marginBottom: 50,
+    marginBottom: 70,
   },
 });
