@@ -1,25 +1,30 @@
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text, ImageBackground, ImageSourcePropType } from "react-native";
 import React from "react";
 import { styles } from "./card-style";
 import Button from "../button";
-
-const Card = () => {
+interface PROPS {
+  imageURL: ImageSourcePropType;
+  title: string;
+  subtitle: string;
+}
+const Card = ({ imageURL, title, subtitle }: PROPS) => {
   return (
     <View style={styles.cardWrapper}>
       <ImageBackground
         resizeMode="cover"
-        source={require("../../assets/images/ModelY.jpeg")}
+        source={imageURL}
         style={styles.background}
       />
       <View style={styles.titleWrapper}>
-        <Text style={styles.title}>Card</Text>
-        <Text style={styles.subTitle}>Card-----111</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subTitle}>{subtitle}</Text>
       </View>
-      <View>
-        <Button text="Order" />
+      <View style={styles.buttonWrapper}>
+        <Button text="CUSTOMER ORDER" />
         <Button
-          text="Explore"
-          style={{ marginTop: 10, backgroundColor: "blue" }}
+          text="EXITING INVENTORY"
+          type="light"
+          style={{ marginTop: 10 }}
         />
       </View>
     </View>

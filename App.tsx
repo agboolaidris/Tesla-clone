@@ -4,7 +4,11 @@ import Card from "./ui/card";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Card />
+      <Card
+        imageURL={require("./assets/images/ModelS.jpeg")}
+        subtitle="Starting at $69,420"
+        title="ModelS"
+      />
     </View>
   );
 }
