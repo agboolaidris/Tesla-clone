@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   titleWrapper: {
-    marginTop: 70,
+    marginTop: 90,
     width: "100%",
     alignItems: "center",
   },
